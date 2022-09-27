@@ -19,7 +19,7 @@ class Solution:
             lendict[k] = lendict[k-1]
         def sortmeth(li: List[int], level: int, lendict: Dict[int,int]) -> int:
             sout = 0
-            for m in range(1,len(li)):
+            for m in range(1,len(li)+1):
                 sout += (lendict[m-1]*level*m + li[m])
             return sout        
         sortdict = dict(sorted(sortdict.items(), key = lambda x: sortmeth(x[1], level, lendict)))
