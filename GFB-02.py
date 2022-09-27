@@ -17,7 +17,6 @@ class Solution:
         lendict = dict(sorted(lendict.items, key = lambda x: x[0]))
         for k in range(1,max(lendict.keys())+1):
             lendict[k] = lendict[k-1]
-        lendict.pop(0)
         def sortmeth(li: List[int], level: int, lendict: Dict[int,int]) -> int:
             sout = 0
             for m in range(len(li)):
