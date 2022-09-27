@@ -12,11 +12,9 @@ class Solution:
                 lendict[len(sortdict[i])] = sortdict[i][-1]
             elif sortdict[i][-1] > lendict[len(sortdict[i])]:
                 lendict[len(sortdict[i])] = sortdict[i][-1] 
-        for le in list(set(range(max(lendict.keys())+1)) - set(lendict.keys())):
-            lendict[le] = 0
+        for j in list(set(range(max(lendict.keys())+1)) - set(lendict.keys())):
+            lendict[j] = 0
         lendict = dict(sorted(lendict.items, key = lambda x: x[0]))
-        for k in range(1,max(lendict.keys())+1):
-            lendict[k] = lendict[k-1]
         def sortmeth(li: List[int], level: int, lendict: Dict[int,int]) -> int:
             sout = 0
             for m in range(1,len(li)+1):
