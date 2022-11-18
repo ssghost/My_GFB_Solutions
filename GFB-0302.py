@@ -9,7 +9,7 @@ class Solution:
         step = 1
         def findnext(ptr: List[int], step: int) -> Tuple[List[int], int]:
             possible = []
-            udlr = [[ptr[0]-1, ptr[1]],[ptr[0]+1,ptr[1]],[ptr[0],ptr[1]-1][ptr[0],ptr[1]+1]]
+            udlr = [[ptr[0]-1,ptr[1]],[ptr[0]+1,ptr[1]],[ptr[0],ptr[1]-1],[ptr[0],ptr[1]+1]]
             for i in range(4):
                 if spade:
                     if udlr[i][0] in range(x) and udlr[i][1] in range(y) and udlr[i] not in passed:
