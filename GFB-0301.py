@@ -1,5 +1,5 @@
 class Solution:
-    def pellets(self, p: str) -> int:
+    def pellets(p: str) -> int:
         p = int(p)
         if p in [0,1]:
             return 0

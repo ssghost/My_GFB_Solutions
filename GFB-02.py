@@ -1,6 +1,6 @@
 from typing import List, Dict
 class Solution:
-    def sorting(self, l: List[str]) -> List[str]:
+    def sorting(l: List[str]) -> List[str]:
         sortdict = {}
         level = len(l)
         lendict = {}
