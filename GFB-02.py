@@ -1,6 +1,6 @@
 from typing import List, Dict
 class Solution:
-    def sorting(l: List[str]) -> List[str]:
+    def sorting(self, l: List[str]) -> List[str]:
         sortdict = {}
         level = len(l)
         lendict = {}
@@ -14,7 +14,7 @@ class Solution:
                 lendict[len(sortdict[i])] = sortdict[i][-1] 
         for j in list(set(range(max(lendict.keys())+1)) - set(lendict.keys())):
             lendict[j] = 0
-        lendict = dict(sorted(lendict.items, key = lambda x: x[0]))
+        lendict = dict(sorted(lendict.items(), key = lambda x: x[0]))
         def sortmeth(li: List[int], level: int, lendict: Dict[int,int]) -> int:
             sout = 0
             for m in range(len(li)):
